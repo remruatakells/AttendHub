@@ -1,5 +1,6 @@
 package com.attendhub.bca;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.test_btn);
         
         btn1.setOnClickListener(v -> {
-            Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show();
+            btn1Click();
         });
 
     }
 
     private void btn1Click() {
-        Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }
